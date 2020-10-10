@@ -60,6 +60,44 @@ class Config{
         }
     }
 
+    function createTableFromSql($tblname) {
+        $query = "SELECT * FROM $tblname";
+        $result= mysqli_query($this->con, $query);
+
+        if ($result->num_rows > 0) {
+            echo "<div class='table-responsive-sm'><table class='table'><thead class='thead-dark'>";
+
+            $field = $result->fetch_fields();
+            $fields = array();
+            $j = 0;
+            foreach ($field as $col){
+                echo "<th scope='col'>".$col->name."</th>";
+                array_push($fields, array(++$j, $col->name));
+            }
+            echo "</thead >";
+
+            while($row = $result->fetch_array()){
+                echo "<tbody><tr>";
+                for ($i=0 ; $i < sizeof($fields) ; $i++){
+                    $fieldname = $fields[$i][1];
+                    $filedvalue = $row[$fieldname];
+                    if(ctype_digit($filedvalue) && strlen($filedvalue) == 10){ //has phone Number
+                        $filedvalue = ltrim($filedvalue, '0'); 
+                        $filedvalue =  substr($filedvalue , 0, 2).' '.substr($filedvalue , 2, 3).' '.substr($filedvalue , 5, 4);
+                        $filedvalue = '+27 '.$filedvalue; // SA phone number
+
+                    }
+                    echo "<td>" . $filedvalue . "</td>";
+                }
+                echo "</tr></tbody>";
+            }
+                echo "</table></div>";
+
+
+        }
+
+    }
+
 }
 
 ?>

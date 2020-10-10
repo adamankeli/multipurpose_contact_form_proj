@@ -170,7 +170,7 @@
                         if(get_data.status == 200){
                             
                             $('#contact-form').trigger("reset");
-                            $("#name, #email, #phone, #addFields").removeClass("is-valid");
+                            $("#name, #email, #phone, #selectFields,#valueFields").removeClass("is-valid");
 
                             $(".success-msg").delay(100).fadeIn( "slow", function (){
                                 $(this).delay(2000).fadeOut("slow");
