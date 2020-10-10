@@ -115,17 +115,9 @@
                     normalizer: function(value) {
                         return $.trim(value);
                     },
-                    regex : /^(1\s?)?((\([0-9]{3}\))|[0-9]{3})[\s\-]?[\0-9]{3}[\s\-]?[0-9]{4}$/
+                    regex : /^0\d{9}$/ 
                 },
-                custom_value : {
-                    required : true,
-                    normalizer: function(value) {
-                        return $.trim(value);
-                    },
-                    minlength : 3,
-                    maxlength : 100
-                }
-
+            
             },
             messages : {
                 name : {
@@ -141,7 +133,7 @@
                 },
                 phone : {
                     required : 'Please Enter Phone number',
-                    regex : 'Please Enter Valid Number (US)' 
+                    regex : 'Please Enter a Valid Number' 
                 },
                 custom_value : {
                     required : 'Please Enter a Response',
