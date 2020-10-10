@@ -1,6 +1,4 @@
    <div class="contact-field-sub">
-        <div id="custom-input-container">
-            <div class="input-row">
                 <select name="custom_name[]" class="cprimary-field form-control">
                     <option value="volvo">Date of Birth</option>
                     <option value="saab">Gender</option>
