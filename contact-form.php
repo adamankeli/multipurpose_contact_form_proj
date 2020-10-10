@@ -30,6 +30,11 @@
                                     <span class="primary-field-icon"><i class="fas fa-user"></i></span>
                                     <input type="text" name="name" id="name" class="primary-field form-control">
                                 </div>
+                                <div class="contact-field-sub">
+                                    <label class="label-text">Phone Number *</label>
+                                    <span class="primary-field-icon"><i class="fas fa-phone"></i></span>
+                                    <input type="text" name="phone" id="phone" class="primary-field form-control">
+                                </div>
                             </div>
                             <div class="contact-field">
                                 <div class="contact-field-sub">
@@ -37,21 +42,16 @@
                                     <span class="primary-field-icon"><i class="fas fa-envelope"></i></span>
                                     <input type="text" name="email" id="email" class="primary-field form-control">
                                 </div>
-                                <div class="contact-field-sub">
-                                    <label class="label-text">Phone Number *</label>
-                                    <span class="primary-field-icon"><i class="fas fa-phone"></i></span>
-                                    <input type="text" name="phone" id="phone" class="primary-field form-control">
-                                </div>
                             </div>
                             <div class="contact-field" id="custom-input-container"></div>
                                 <div class="contact-field-sub" id="custom-input-container">
-                                    <input type="button" class="btn-add-more" value="Add More Details" onClick="addMore()" />
+                                    <input type="button" class="btn btn-secondary btn-sm" value="Add More Details" onClick="addMore()" />
                                 </div>
                             <div class="contact-field">
                                 <div class="success-msg"> Thank You For Contacting Us. </div>
                             </div>    
                             <div class="contact-field">
-                                <input type="submit" value="Send" class="my-btn" id="submit">
+                                <input type="submit" value="Send" class="my-btn btn btn-primary" id="submit">
                                 <button class="my-btn" id="loader" disabled>
                                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                 </button>
