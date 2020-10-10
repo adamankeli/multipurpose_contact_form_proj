@@ -12,7 +12,8 @@
 
 #INSTALLATION
 
-- Run the sqldatabase.sql CREATE script to install the is the database and table.
+- Create database 'sql_database' 
+- Import sql_database.sql to CREATE table.
 - configure database parametes config/config.php 
 - contact-form.php displays the html contact form
 - php/display-sql-table displays the mysql table entries in a html table
